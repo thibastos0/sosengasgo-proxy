@@ -1,0 +1,5 @@
+[tool.vercel]
+entrypoint = "api.ai:handler"
+
+[[tool.vercel.functions]]
+entrypoint = "api.whatsapp:handler"
