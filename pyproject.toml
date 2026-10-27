@@ -1,3 +1,10 @@
+[project]
+name = "sosengasgo-proxy"
+version = "0.1.0"
+dependencies = [
+    "requests>=2.32.3",
+]
+
 [tool.vercel]
 entrypoint = "api.ai:handler"
 
