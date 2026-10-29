@@ -9,7 +9,8 @@ import requests
 logger = logging.getLogger("sosengasgo.proxy")
 logging.basicConfig(level=logging.INFO)
 
-MAX_PAYLOAD_BYTES = 64 * 1024  # 64 KB máximo
+# MAX_PAYLOAD_BYTES = 64 * 1024  # 64 KB máximo
+MAX_PAYLOAD_BYTES = 2 * 1024 * 1024  # Aumentado para 2 MB para suportar áudio em Base64
 MAX_JSON_DEPTH = 5
 MAX_STRING_LENGTH = 4096
 REQUEST_TIMEOUT_SECONDS = 10
