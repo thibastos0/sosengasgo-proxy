@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 MAX_PAYLOAD_BYTES = 2 * 1024 * 1024  # Aumentado para 2 MB para suportar áudio em Base64
 MAX_JSON_DEPTH = 5
 MAX_STRING_LENGTH = 2 * 1024 * 1024  # Aumentado para 2 MB para aceitar o áudio em Base64
-REQUEST_TIMEOUT_SECONDS = 15
+REQUEST_TIMEOUT_SECONDS = 45
 
 
 def sanitize_json_value(value: Any, depth: int = 0) -> Any:
