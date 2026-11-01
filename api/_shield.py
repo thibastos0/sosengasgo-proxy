@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 MAX_PAYLOAD_BYTES = 2 * 1024 * 1024  # Aumentado para 2 MB para suportar áudio em Base64
 MAX_JSON_DEPTH = 5
 MAX_STRING_LENGTH = 2 * 1024 * 1024  # Aumentado para 2 MB para aceitar o áudio em Base64
-REQUEST_TIMEOUT_SECONDS = 45
+REQUEST_TIMEOUT_SECONDS = 15
 
 
 def sanitize_json_value(value: Any, depth: int = 0) -> Any:
@@ -162,7 +162,11 @@ class SecureN8NProxyHandler(BaseHTTPRequestHandler):
             try:
                 response_json = n8n_response.json()
             except ValueError:
-                response_json = {"status": "ok"}
+                #response_json = {"status": "ok"}
+                response_json = {
+                    "response_text": n8n_response.text,
+                    "status": "raw_text_debug"
+                }
 
             self._send_json(n8n_response.status_code, response_json)
 
