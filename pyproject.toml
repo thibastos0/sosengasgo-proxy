@@ -10,3 +10,6 @@ entrypoint = "api.ai:handler"
 
 [[tool.vercel.functions]]
 entrypoint = "api.whatsapp:handler"
+
+[[tool.vercel.functions]]
+entrypoint = "api.finishEmergency:handler
