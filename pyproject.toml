@@ -11,5 +11,5 @@ entrypoint = "api.ai:handler"
 [[tool.vercel.functions]]
 entrypoint = "api.whatsapp:handler"
 
-[[tool.vercel]]
+[[tool.vercel.functions.finishEmergency]]
 entrypoint = "api.finishEmergency:handler"
